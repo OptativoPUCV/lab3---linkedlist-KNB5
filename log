@@ -116,3 +116,9 @@ list.c:71:26: note: referencing an object of size 8 allocated by ‘malloc’
 cc1: all warnings being treated as errors
 Compilation failed
 5446302
+Wed 27 Mar 2024 02:18:33 PM UTC: 
+ list.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+ tests:  9|3
+total_score: 35/70
+ab18a22

@@ -122,18 +122,13 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
-  Node* elemento = firstList(list);
-  void* dato = list->current->data;
+ if(list->current == NULL) return NULL;
 
-  while(elemento != NULL)
-    {
-      if(elemento->data == list->current->data)
-      {
-        elemento->prev->next = elemento->next;
-        break;
-      }
-      elemento = nextList(list);
-    }
+  void * dato = list->current->data;
+
+  list->current->prev->next = list->current->next;
+  list->current->next->prev = list->current->prev->next;
+
   return dato;
 }
 
